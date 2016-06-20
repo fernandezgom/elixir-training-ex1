@@ -1,0 +1,9 @@
+<!-- JLF: Including class movie for 5th test -->
+<div class="movie">
+  <!-- JLF: Must include a H2 with title, year, image and paragraph for 5th test -->
+  <h2><%= @mv.title %>, <%= @mv.year %></h2>
+  <img src="<%= @mv.cover %>">
+  <p><%= @mv.plot %></p>
+  <!-- JLF: Must include a back link to index for 5th test -->
+  <%= link "Back", to: movie_path(@conn, :index), class: "back" %>
+</div>

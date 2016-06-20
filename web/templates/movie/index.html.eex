@@ -1,0 +1,12 @@
+<div>
+  <!-- JLF H2 including Listing movies text for 1st test-->
+  <h2>Listing movies</h2>
+  <!-- JLF Unordered list for 2nd test including href to show-->
+  <ul class="movies">
+    <%= for movie <- @mL do %>
+      <li><%= link movie.title, to: movie_path(@conn, :show, movie.id) %></li>
+    <% end %>
+  </ul>
+  <!-- JLF Anchor with class new movie for 1st test-->
+  <%= link "New movie", to: movie_path(@conn, :new), class: "new-movie" %>
+</div>
